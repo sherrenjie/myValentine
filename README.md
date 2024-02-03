@@ -1,4 +1,4 @@
-# Project titile: myValentine
+# Project title: myValentine
 
 # Purpose
 
