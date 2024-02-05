@@ -2,10 +2,24 @@ import { useState } from "react";
 import "./App.css";
 
 const phrases = {
-  
+  "No :(":
+  "Are you sure?",
+  "Really? :(":
+  "I will be really sad",
+  "Don't do this to me":
+  "How can you do this to me?",
+  "I am going to cry":
+  "You are going to break my hear",
+  "Please no:(":
+  "Think again, huh?",
+  "You don't want my love? <3":
+  "You sure?",
+  "Please :(":
 }
 function App() {
-  const [count, setCount] = useState(0);
+    const [noCount, setNoCount] = useState(0);
+    const [yesPressed, setYesPressed] = useState(false);
+    const yesButtonSize = noCount * 20 + 16;
 
   return (
     <>
