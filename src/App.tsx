@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 
+const phrases = {
+  
+}
 function App() {
   const [count, setCount] = useState(0);
 
