@@ -2,49 +2,68 @@ import { useState } from "react";
 import "./App.css";
 
 const phrases = {
-  "No :(":
-  "Are you sure?",
-  "Really? :(":
-  "I will be really sad",
-  "Don't do this to me":
-  "How can you do this to me?",
-  "I am going to cry":
-  "You are going to break my hear",
-  "Please no:(":
-  "Think again, huh?",
-  "You don't want my love? <3":
-  "You sure?",
-  "Please :(":
-}
+  "No :(": "Are you sure?",
+  "Really? :(": "I will be really sad",
+  "Don't do this to me": "How can you do this to me?",
+  "I am going to cry": "You are going to break my hear",
+  "Please no:(": "Think again, huh?",
+  "You don't want my love? <3": "You sure?",
+  "Please :(": "Are you sure?",
+  "I will not do this": "Are you sure?",
+};
+
 function App() {
-    const [noCount, setNoCount] = useState(0);
-    const [yesPressed, setYesPressed] = useState(false);
-    const yesButtonSize = noCount * 20 + 16;
+  const [noCount, setNoCount] = useState(0);
+  const [yesPressed, setYesPressed] = useState(false);
+  const yesButtonSize = noCount * 20 + 16;
+
+  function handleYesClick() {
+    setYesPressed(true);
+  }
+  function handleNoClick() {
+    setNoCount(noCount + 1);
+  }
+
+  function getNoButtonText() {
+    return phrases[Math.min(noCount, phrases.length - 1)];
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="valentine-container">
+      {yesPressed ? (
+        <>
+          <img
+            src="src/assets/3ce884bb29ad1909a2c253354497420f.gif"
+            alt="bear-Kissing"
+          />
+          <div className="text">Yayyy !!!</div>
+        </>
+      ) : (
+        <>
+          <img
+            className="kiss"
+            src="src/assets/200w.gif"
+            alt="bear with heart"
+          />
+          <div className="text">Will you be my valentine 🌹?</div>
+          <div className="both-Button">
+            <button
+              className="yesButton"
+              style={{
+                fontSize: yesButtonSize,
+                backgroundColor: "rgb(248, 229, 89)",
+              }}
+              onClick={handleYesClick}
+            >
+              Yes 🙈
+            </button>
+            <button className="NoButton" style={{}} onClick={handleNoClick}>
+              {getNoButtonText()}
+            </button>
+          </div>
+        </>
+      )}
+    </div>
   );
 }
-
 export default App;
