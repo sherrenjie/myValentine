@@ -32,18 +32,14 @@ function App() {
     <div className="valentine-container">
       {yesPressed ? (
         <>
-          <img
-            src="src/assets/3ce884bb29ad1909a2c253354497420f.gif"
-            alt="bear-Kissing"
-          />
-          <div className="text">Yayyy !!!</div>
+          <img src="src/assets/200w.gif" />
+          <div className="text">Yeay!</div>
         </>
       ) : (
         <>
           <img
             className="kiss"
-            src="src/assets/200w.gif"
-            alt="bear with heart"
+            src="src/assets/3ce884bb29ad1909a2c253354497420f.gif"
           />
           <div className="text">Will you be my valentine 🌹?</div>
           <div className="both-Button">
@@ -51,11 +47,11 @@ function App() {
               className="yesButton"
               style={{
                 fontSize: yesButtonSize,
-                backgroundColor: "rgb(248, 229, 89)",
+                backgroundColor: "#00FF00,
               }}
               onClick={handleYesClick}
             >
-              Yes 🙈
+              YES
             </button>
             <button className="NoButton" style={{}} onClick={handleNoClick}>
               {getNoButtonText()}
