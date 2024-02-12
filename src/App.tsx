@@ -47,7 +47,7 @@ function App() {
               className="yesButton"
               style={{
                 fontSize: yesButtonSize,
-                backgroundColor: "#00FF00,
+                backgroundColor: "#00FF00",
               }}
               onClick={handleYesClick}
             >
