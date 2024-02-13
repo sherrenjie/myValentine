@@ -6,17 +6,19 @@
 
 .kiss {
   position: center;
+  max-width: 100%;
+  height: auto;
 }
 
 .yeay {
   width: 420px;
   height: auto;
-  position: center;
+  max-width: 100%;
 }
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -37,4 +39,12 @@
   justify-content: center;
   text-align: center;
   height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  overflow: hidden;
+  height: 100%;
 }
