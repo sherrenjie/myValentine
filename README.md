@@ -1,4 +1,4 @@
-# I am sweet girlfriend and my boyfriend has to agree with me!
+# I am a sweet girlfriend and my boyfriend has to agree with me!
 
 # Purpose
 
